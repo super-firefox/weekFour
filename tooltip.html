@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        [data-tooltip] {
+            position: relative;
+        }
+        [data-tooltip]:hover::before {
+            content: "";
+            position:absolute;
+            top: 1.4em;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid rgb(0, 238, 255);
+        }
+
+        [data-tooltip]:hover::after{
+            content: attr(data-tooltip);
+            position:absolute;
+            width: 420px;
+            left:0;
+            top:2em;
+            background-color: rgb(0, 238, 255);
+            border-radius: 5px;
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <p>Text before string</p>
+    <p class="move-cursor" data-tooltip = "The tooltip communicates something meaningful and useful ...">Move the cursor here</p>
+    <p>Text after string</p>
+</body>
+</html>
