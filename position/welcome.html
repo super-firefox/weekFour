@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        form {
+            position: absolute;
+            left: 30vw;
+            border: solid 1px rgba(99, 99, 99, 0.842);
+            width: 30vw;
+        }
+
+        h1, .input, button {
+            display: block;
+        }
+
+        h1 {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .input_file, label{
+           height: 2em;
+           width: 80%;
+           margin: 5% 10%;
+        }
+
+        .remember {
+            font-style: italic;
+            /* padding-left: 50%; */
+            /* width: auto;
+            margin-right: -80%; */
+        }
+
+        .remember::before {
+            content: "";
+            width: 50%;
+            display: inline-block;
+            position: relative;
+            margin-left: 20px;
+        }
+
+        button {
+            min-height: 3em;
+            min-width: 80%;
+            margin: 5% 10%;
+            background-color: burlywood;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Welcome</h1>
+        <input class="input_file" type="text" placeholder="Login">
+        <input class="input_file" type="password" placeholder="Password">
+        <label class = "remember" for="remember"><input type="checkbox" name="saveMe" id="remember">Remember me</label>
+        <button>Log in</button>
+    </form>
+</body>
+</html>
